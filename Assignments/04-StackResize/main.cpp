@@ -1,17 +1,17 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-// Author:           Terry Griffin
-// Email:            terry.griffin@msutexas.edu
-// Label:            L01
-// Title:            Lecture 01 - Array Based Stack
+// Author:           David Hawkins
+// Email:            david.james@hawkinsonline.us
+// Label:            P01
+// Title:            Assignment 4 - Resizing the Stack
 // Course:           3013
 // Semester:         Spring 2020
 //
 // Description:
 //       Overview of a class implementing an array based stack
 //
-/////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 
 using namespace std;
