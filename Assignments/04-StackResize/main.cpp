@@ -17,13 +17,6 @@
 
 using namespace std;
 
-//Function Prototypes will go here
-void openFiles(ifstream & infile);
-
-void readValue(ifstream & infile, int &val);
-
-bool evenOrOdd(int val);
-
 /**
  * ArrayStack
  *
@@ -148,11 +141,11 @@ public:
 	int Pop() {
 
 		CheckResize();
-	/*	
-    if ((top + 1) <= size / 2) {
-			ContainerShrink();
-		}
-*/
+		/*
+		if ((top + 1) <= size / 2) {
+				ContainerShrink();
+			}
+	*/
 		if (!Empty()) {
 			return A[top--];
 		}
@@ -199,11 +192,11 @@ public:
 	bool Push(int x) {
 
 		CheckResize();
-/*
-		if (Full()) {
-			ContainerGrow();
-		}
-*/
+		/*
+				if (Full()) {
+					ContainerGrow();
+				}
+		*/
 		if (!Full()) {
 			A[++top] = x;
 			return true;
@@ -288,59 +281,65 @@ public:
 		if (Full()) {
 			ContainerGrow();
 		}
-		else if ((top + 1) <= size / 2) {
+		else if (((top + 1) < size / 2) && !Empty()) {
 			ContainerShrink();
 		}
 	}
 
 };
 
+void openFiles(ifstream & infile);
 
+void readValue(ifstream & infile, int &v);
+
+bool evenOrOdd(int val);
+
+void printResults(ArrayStack sta, int resized, int max);
+
+void closeFiles(ifstream& infile);
 
 // MAIN DRIVER
 // Simple Array Based Stack Usage:
 int main() {
 
-  ifstream infile;
-  openFiles(infile);
+	ifstream infile;
+	openFiles(infile);
 
-	ArrayStack stack;                     //stack object
-	int v = 0;
+	ArrayStack stack;                   //stack object
+	int v = 0;							//holds read-in values
+	int resize = 0;						//how many times stack resized
+	int changeSize = 0;					//holds size before resizing
 
-  readValue(infile, v);
+	readValue(infile, v);				//read in first value
 
-	//while more data
-	while (!infile.eof())
+	int maxSize = stack.getSize();		//get first size and make that maxsize
+
+	while(!infile.eof())				//loops until end of file
 	{
-		if(evenOrOdd(v)){
-      stack.Push(v);
-    }
-    else{
-      stack.Pop();
-    }
 
+		changeSize = stack.getSize();
+
+		if (evenOrOdd(v)) {
+			stack.Push(v);
+		}
+
+		else {
+			stack.Pop();
+		}
+
+		if(changeSize != stack.getSize()){
+			resize++;
+		}
+		if(stack.getSize() > maxSize){
+			maxSize = stack.getSize();
+		}
 		//read next value
 		readValue(infile, v);
 	}
-/*
-	for (int i = 0; i < 20; i++) {
-		r = rand() % 100;
-		if (!stack.Push(r)) {
-			cout << "Push failed" << endl;
-		}
-		cout << stack.getSize() << endl;
-		stack.Print();
-		cout << endl;
-	}
 
-	  for(int i=0;i<11;i++){
-		stack.Pop();
-		cout << stack.getSize() << endl;
-		stack.Print();
-		cout << endl;
-	  }
-	*/
-	stack.Print();
+	printResults(stack, resize, maxSize);
+
+	closeFiles(infile);
 
 	system("pause");
 	return 0;
@@ -353,15 +352,31 @@ void openFiles(ifstream & infile){
 	cin >> inFileName; infile.open(inFileName);
 }
 
-void readValue(ifstream & infile, int &val){
-  infile >> val;
+void readValue(ifstream & infile, int &v){
+	infile >> v;
 }
 
-bool evenOrOdd(int val){
-  if(val % 2 == 0){
-    return true;      //if the value is even, function returns true
-  }
-  else{
-    return false;     //if the value if odd, function returns false
-  }
+bool evenOrOdd(int val) {
+	if (val % 2 == 0) {
+		return true;      //if the value is even, function returns true
+	}
+	else {
+		return false;     //if the value if odd, function returns false
+	}
+}
+
+void printResults(ArrayStack sta, int resized, int max) {
+	cout << "##########################################################" << endl;
+	cout << "\tAssignment 4 - Resizing the Stack" << endl;
+	cout << "\tCMPS 3013" << endl;
+	cout << "\tDavid Hawkins" << endl << endl;
+	cout << "\tMax Size:\t\t" << max << endl;
+	cout << "\tEnd Stack Size:\t\t" << sta.getSize() << endl;
+	cout << "\tStack Resized:\t\t" << resized << " times" << endl;
+	cout << "##########################################################" << endl;
+}
+
+void closeFiles(ifstream& infile)
+{
+	infile.close();
 }
