@@ -323,7 +323,7 @@ public:
 		if (Full()) {
 			ContainerGrow();
 		}
-		else if (((top + 1) < size / 2) && !Empty()) {	//checks ratio AND if
+		else if (((top + 1) < size / 2) && size >= 10) {	//checks ratio AND if
 			ContainerShrink();							//stack is empty
 		}
 	}
