@@ -336,13 +336,13 @@ public:
  * 
  ****************************************************/
 
-void openFiles(ifstream & infile);
+void openFiles(ifstream & infile, ofstream & outfile);
 
 void readValue(ifstream & infile, int &v);
 
 bool evenOrOdd(int val);
 
-void printResults(ArrayStack sta, int resized, int max);
+void printResults(ArrayStack sta, int resized, int max, ofstream & outfile);
 
 void closeFiles(ifstream& infile);
 
@@ -351,7 +351,8 @@ void closeFiles(ifstream& infile);
 int main() {
 
 	ifstream infile;						//input file object
-	openFiles(infile);
+	ofstream outfile;						//output file object
+	openFiles(infile, outfile);
 
 	ArrayStack stack;                   	//stack object
 	int v = 0;								//holds read-in values
@@ -385,7 +386,7 @@ int main() {
 		readValue(infile, v);				//read next value
 	}
 
-	printResults(stack, resize, maxSize);
+	printResults(stack, resize, maxSize, outfile);
 
 	closeFiles(infile);
 
@@ -402,14 +403,18 @@ int main() {
 *
 * Params:
 *      - [ifstream] : stream object that reads from the file
+*	   - [ofstream] : stream object that writes to a file
 *
 * Returns:
 *      - NULL
 */
-void openFiles(ifstream & infile){
+void openFiles(ifstream & infile, ofstream & outfile){
 	char inFileName[40];
+	char outFileName[40];
 	cout << "Enter the input file name: ";
 	cin >> inFileName; infile.open(inFileName);
+	cout << "Enter the output file name: ";
+	cin >> outFileName; outfile.open(outFileName);
 }
 
 /**
@@ -465,15 +470,15 @@ bool evenOrOdd(int val) {
 * Returns:
 *      - NULL
 */
-void printResults(ArrayStack sta, int resized, int max) {
-	cout << "########################################################" << endl;
-	cout << "\tAssignment 4 - Resizing the Stack" << endl;
-	cout << "\tCMPS 3013" << endl;
-	cout << "\tDavid Hawkins" << endl << endl;
-	cout << "\tMax Size:\t\t" << max << endl;
-	cout << "\tEnd Stack Size:\t\t" << sta.getSize() << endl;
-	cout << "\tStack Resized:\t\t" << resized << " times" << endl;
-	cout << "########################################################" << endl;
+void printResults(ArrayStack sta, int resized, int max, ofstream & out) {
+	out << "########################################################" << endl;
+	out << "\tAssignment 4 - Resizing the Stack" << endl;
+	out << "\tCMPS 3013" << endl;
+	out << "\tDavid Hawkins" << endl << endl;
+	out << "\tMax Stack Size: " << max << endl;
+	out << "\tEnd Stack Size: " << sta.getSize() << endl;
+	out << "\tStack Resized: " << resized << " times" << endl;
+	out << "########################################################" << endl;
 }
 
 /**
