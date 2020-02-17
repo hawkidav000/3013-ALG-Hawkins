@@ -267,7 +267,7 @@ public:
 	 * @description:
 	 * 		Sorts an unsorted list of values into min-heap order
 	 *
-	 * @param  {int*} A   :  array pointer with unsorted values to make into a heap
+	 * @param  {int*} A   :  array pointer with unsorted values to make a heap
 	 * @param  {int} size :  size of new heap
 	 */
 	void Heapify(int *A, int size) {
