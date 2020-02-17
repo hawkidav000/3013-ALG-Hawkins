@@ -151,15 +151,17 @@ private:
 	 * @return              : void
 	 */
 	void SinkDown(int index) {
-		int newIndex = 0;
-		while ((index <= end) && 
-		(H[index] > H[Left(index)] || H[index] > H[Right(index)])) {
-			newIndex = PickChild(index);
+		int newIndex = 0;					//Used to hold child index.
+		while ((index <= end) && (H[index] >//Checks if index at end, or if 
+		H[Left(index)] || H[index] > 		//parent is greater than child.
+		H[Right(index)])){
+
+			newIndex = PickChild(index);	//Finds index of switched child			
 			if (OnHeap(newIndex)) {
-				Swap(index, newIndex);
+				Swap(index, newIndex);		//If index on heap, switch
 			}
-			index = newIndex;
-		}
+			index = newIndex;				//Base case. Index will eventually
+		}									//be greater then end.
 	}
 
 	/**
@@ -172,11 +174,11 @@ private:
 	 * @return              : index to child
 	 */
 	int PickChild(int index) {
-		if (OnHeap(Left(index))) {
+		if (OnHeap(Left(index))) {		//if index not on heap, no children
 			if (!OnHeap(Right(index))) {
-				return Left(index);
+				return Left(index);		//if no right child, then left child
 			}
-			else {
+			else {						//if two children, send smaller one
 				if (H[Left(index)] <= H[Right(index)]) {
 					return Left(index);
 				}
@@ -186,7 +188,7 @@ private:
 			}
 		}
 		else {
-			return end + 1;
+			return end + 1;				//if no children, return to break loop
 		}
 	}
 
