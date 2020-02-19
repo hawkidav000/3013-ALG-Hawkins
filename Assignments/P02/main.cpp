@@ -66,22 +66,37 @@ public:
         return list;
     }
 
+    string PrintTail(){
+        string list;
+
+        list += tail->word + ": " + tail->definition;
+
+        return list;
+    }
+
 
 };
 
 int main(){
 
+    Timer T;
     LinkedList L;
 
     JsonFacade J("dict_w_defs.json");
 
-    vector<string> list = J.getKeys();
-
+    T.Start();
     for (int i = 0; i < J.getSize(); i++){
         L.Insert(J.getKey(i), J.getValue(J.getKey(i)));
     }
+    T.End();
 
-    string link = L.PrintList();
+    double s = T.Seconds();
+    long m = T.MilliSeconds();
+
+    cout << "Seconds: " << s << endl;
+    cout << "Milliseconds: " << m << endl;
+
+    string link = L.PrintTail();
     cout << link;
 
     return 0;
