@@ -28,8 +28,8 @@ for (int I = 0; I < n; I++)
     for (int j = 1; j < n; j++)
         {some_statement;}
 ```
-**Solution:**<br>
-**Reasoning:**<br>
+**Solution:** n<sup>2</sup> operations.<br>
+**Reasoning:** The outer loop will run n times, and for every time the outer loop runs once the inner loop runs n times. This produces n X n operations, which is n<sup>2</sup> operations.<br>
 
 
 ```cpp
@@ -38,8 +38,8 @@ for (int I = 0; I < n; I +=2)
     for (int j = 1; j < n; j++)
         {some_statement;}
 ```
-**Solution:**<br>
-**Reasoning:**<br>
+**Solution:** n<sup>2</sup> operations.<br>
+**Reasoning:**<br> The outer loop will run n/2 times, and every time the outer loop runs once the inner loop will run n times. The solution is n<sup>2</sup> because this produces n<sup>2</sup>/2, and when considering complexities, all constants are disregarded, so the solution is n<sup>2</sup>.
 
 
 ```cpp
@@ -48,8 +48,8 @@ for (int j = 1 ; j < n ; j *= 2)
     for (int I = 1; i<n; i++)
         {some_statement;} 
 ```
-**Solution:**<br>
-**Reasoning:**<br>
+**Solution:** n log(n) operations.<br>
+**Reasoning:** The outer loop will run log(n) times, and every time the outer loop runs once the inner loop will run n times. This produces n log(n) operations total.<br>
 
 
 At most, how many comparisons are required to search a sorted vector of 1023 elements using the binary
