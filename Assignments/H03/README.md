@@ -2,23 +2,22 @@
 #### Due: 03-13-2020 (Friday @ 3:30 p.m.)
 
 - Given a collection of algorithms that runs on **O(1), O(n log n), O(n), O(n<sup>2</sup>), O(log n), O(n!)**, order the algorithms from fastest to slowest.<br>
-**Solution:**<br>
-**Reasoning:**<br>
+**Solution:** O(1), O(log n), O(n), O(n log n), O(n<sup>2</sup>), O(n!)<br>
 
 - Suppose that the complexity of an algorithm is O(n<sup>2</sup>). Suppose that the program that uses the algorithm run in 10 seconds for a data set of size n. If the data size is doubled, how long will it take (approximately) to run the program?<br>
-**Solution:**<br>
-**Reasoning:**<br>
+**Solution:** 40 seconds<br>
+**Reasoning:** First, plug in the factor that the data size was increased by (2) into the complexity (n<sup>2</sup>). You multiply the time (10 seconds) by that result (4) to get the answer.<br>
 
 
 
 - Complexities : **O(1), O(n log n), O(n), O(n<sup>2</sup>), O(log n), O(n!) , O(h)**
-1.Finding the max element in an unordered stack would require **O(n)** operations?
-2. Finding the min element in an unordered queue would require **O(n)** operations?
-3. Finding some element in some Binary Search Tree would require **O(h)** operations?
-4. Finding some element in a balanced Binary Search Tree would require **O(log n)** operations?
-5. Finding some element in an ordered linked list would require **O(n)** operations (worst case)?
-6. Finding some element in an ordered linked list would require **O(n/2)** operations (average case)?
-7. Finding some element in an unordered linked list would require **O(n)** operations (worst case)?
+1. Finding the max element in an unordered stack would require **O(n)** operations.
+2. Finding the min element in an unordered queue would require **O(n)** operations.
+3. Finding some element in some Binary Search Tree would require **O(h)** operations.
+4. Finding some element in a balanced Binary Search Tree would require **O(log n)** operations.
+5. Finding some element in an ordered linked list would require **O(n)** operations (worst case).
+6. Finding some element in an ordered linked list would require **O(n/2)** operations (average case).
+7. Finding some element in an unordered linked list would require **O(n)** operations (worst case).
 
 
 8. For each of the following, count the number of operations where some_statement is executed based on the loops
