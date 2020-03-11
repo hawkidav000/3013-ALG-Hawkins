@@ -39,7 +39,7 @@ for (int I = 0; I < n; I +=2)
         {some_statement;}
 ```
 **Solution:** n<sup>2</sup> operations.<br>
-**Reasoning:**<br> The outer loop will run n/2 times, and every time the outer loop runs once the inner loop will run n times. The solution is n<sup>2</sup> because this produces n<sup>2</sup>/2, and when considering complexities, all constants are disregarded, so the solution is n<sup>2</sup>.
+**Reasoning:** The outer loop will run n/2 times, and every time the outer loop runs once the inner loop will run n times. The solution is n<sup>2</sup> because this produces n<sup>2</sup>/2, and when considering complexities, all constants are disregarded, so the solution is n<sup>2</sup>.<br>
 
 
 ```cpp
@@ -52,7 +52,7 @@ for (int j = 1 ; j < n ; j *= 2)
 **Reasoning:** The outer loop will run log(n) times, and every time the outer loop runs once the inner loop will run n times. This produces n log(n) operations total.<br>
 
 
-At most, how many comparisons are required to search a sorted vector of 1023 elements using the binary
+9. At most, how many comparisons are required to search a sorted vector of 1023 elements using the binary
 search algorithm?<br>
 **Solution:** It would take, at most, 10 comparisons. <br>
 **Reasoning:** Dakota and I wrote a replit and actually tried this with a sorted array of 1023 elements, and the result was 10 comparisons.<br>
