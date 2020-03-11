@@ -66,47 +66,47 @@ In each of the following examples, please choose the best data structure(s).
 **Solution:** Stack<br>
 **Reasoning:**<br>
 
-2. You need to store undo/redo operations in a word processor.
+2. You need to store undo/redo operations in a word processor.<br>
 **Solution:** Stack<br>
 **Reasoning:**<br>
 
-3. You need to evaluate an expression (i.e., parse).
+3. You need to evaluate an expression (i.e., parse).<br>
 **Solution:**<br>
 **Reasoning:**<br>
 
-4. You need to store the friendship information on a social networking site. I.e., who is friends with who.
+4. You need to store the friendship information on a social networking site. I.e., who is friends with who.<br>
 **Solution:** Graph<br>
 **Reasoning:**<br>
 
-5. You need to store an image (1000 by 1000 pixels) as a bitmap.
+5. You need to store an image (1000 by 1000 pixels) as a bitmap.<br>
 **Solution:** 2D Array<br>
 **Reasoning:**<br>
 
-6. To implement printer spooler so that jobs can be printed in the order of their arrival.
+6. To implement printer spooler so that jobs can be printed in the order of their arrival.<br>
 **Solution:** Queue<br>
 **Reasoning:**<br>
 
-7. To implement back functionality in the internet browser.
+7. To implement back functionality in the internet browser.<br>
 **Solution:** Stack<br>
 **Reasoning:** So that the last entry is easily retrieved by popping off the top.<br>
 
-8. To store the possible moves in a chess game.
+8. To store the possible moves in a chess game.<br>
 **Solution:** Graph<br>
 **Reasoning:** Each move respresents a node, and the graph is fully connected. However, if the player were to lose a piece, then moves that go down that path for that piece could not be travelled on, and therefore the same for all other impossible moves at any given point.<br>
 
-9. To store a set of fixed key words which are referenced very frequently.
+9. To store a set of fixed key words which are referenced very frequently.<br>
 **Solution:** Priority Queue<br>
 **Reasoning:**<br>
 
-10. To store the customer order information in a drive-in burger place. (Customers keep on coming and they have to get their correct food at the payment/food collection window.)
+10. To store the customer order information in a drive-in burger place. (Customers keep on coming and they have to get their correct food at the payment/food collection window.)<br>
 **Solution:** Queue<br>
 **Reasoning:**<br>
 
-11. To store the genealogy information of biological species.
+11. To store the genealogy information of biological species.<br>
 **Solution:** Tree<br>
 **Reasoning:**<br>
 
-12. To store an alphabetized list of names in order to look up quickly.
+12. To store an alphabetized list of names in order to look up quickly.<br>
 **Solution:**<br>
 **Reasoning:**<br>
 
