@@ -2,12 +2,12 @@
 #### Due: 03-13-2020 (Friday @ 3:30 p.m.)
 
 - Given a collection of algorithms that runs on **O(1), O(n log n), O(n), O(n<sup>2</sup>), O(log n), O(n!)**, order the algorithms from fastest to slowest.
-**Solution:**
-**Reasoning:** 
+**Solution:**<br>
+**Reasoning:**<br>
 
 - Suppose that the complexity of an algorithm is O(n<sup>2</sup>). Suppose that the program that uses the algorithm run in 10 seconds for a data set of size n. If the data size is doubled, how long will it take (approximately) to run the program?
-**Solution:**
-**Reasoning:** 
+**Solution:**<br>
+**Reasoning:**<br>
 
 
 
@@ -29,8 +29,8 @@ for (int I = 0; I < n; I++)
     for (int j = 1; j < n; j++)
         {some_statement;}
 ```
-**Solution:**
-**Reasoning:** 
+**Solution:**<br>
+**Reasoning:**<br>
 
 
 ```cpp
@@ -39,8 +39,8 @@ for (int I = 0; I < n; I +=2)
     for (int j = 1; j < n; j++)
         {some_statement;}
 ```
-**Solution:**
-**Reasoning:** 
+**Solution:**<br>
+**Reasoning:**<br>
 
 
 ```cpp
@@ -49,66 +49,66 @@ for (int j = 1 ; j < n ; j *= 2)
     for (int I = 1; i<n; i++)
         {some_statement;} 
 ```
-**Solution:**
-**Reasoning:** 
+**Solution:**<br>
+**Reasoning:**<br>
 
 
 At most, how many comparisons are required to search a sorted vector of 1023 elements using the binary
 search algorithm?
-**Solution:** It would take, at most, 10 comparisons. 
-**Reasoning:** Dakota and I wrote a replit and actually tried this with a sorted array of 1023 elements, and the result was 10 comparisons.
+**Solution:** It would take, at most, 10 comparisons. <br>
+**Reasoning:** Dakota and I wrote a replit and actually tried this with a sorted array of 1023 elements, and the result was 10 comparisons.<br>
 
 In each of the following examples, please choose the best data structure(s).
 - Options are: **Array, Linked Lists, Stack, Queues, Trees, Graphs, Sets, Hash Tables**. 
 - Note that there may not be one clear answer.
 
 1. You have to store social network “feeds”. You do not know the size, and things may need to be dynamically added.
-**Solution:** Stack
-**Reasoning:**
+**Solution:** Stack<br>
+**Reasoning:**<br>
 
 2. You need to store undo/redo operations in a word processor.
-**Solution:** Stack
-**Reasoning:**
+**Solution:** Stack<br>
+**Reasoning:**<br>
 
 3. You need to evaluate an expression (i.e., parse).
-**Solution:** 
-**Reasoning:**
+**Solution:**<br>
+**Reasoning:**<br>
 
 4. You need to store the friendship information on a social networking site. I.e., who is friends with who.
-**Solution:** Graph
-**Reasoning:**
+**Solution:** Graph<br>
+**Reasoning:**<br>
 
 5. You need to store an image (1000 by 1000 pixels) as a bitmap.
-**Solution:** 2D Array
-**Reasoning:**
+**Solution:** 2D Array<br>
+**Reasoning:**<br>
 
 6. To implement printer spooler so that jobs can be printed in the order of their arrival.
-**Solution:** Queue
-**Reasoning:**
+**Solution:** Queue<br>
+**Reasoning:**<br>
 
 7. To implement back functionality in the internet browser.
-**Solution:** Stack
-**Reasoning:** So that the last entry is easily retrieved by popping off the top.
+**Solution:** Stack<br>
+**Reasoning:** So that the last entry is easily retrieved by popping off the top.<br>
 
 8. To store the possible moves in a chess game.
-**Solution:** Graph
-**Reasoning:** Each move respresents a node, and the graph is fully connected. However, if the player were to lose a piece, then moves that go down that path for that piece could not be travelled on, and therefore the same for all other impossible moves at any given point.
+**Solution:** Graph<br>
+**Reasoning:** Each move respresents a node, and the graph is fully connected. However, if the player were to lose a piece, then moves that go down that path for that piece could not be travelled on, and therefore the same for all other impossible moves at any given point.<br>
 
 9. To store a set of fixed key words which are referenced very frequently.
-**Solution:** Priority Queue
-**Reasoning:**
+**Solution:** Priority Queue<br>
+**Reasoning:**<br>
 
 10. To store the customer order information in a drive-in burger place. (Customers keep on coming and they have to get their correct food at the payment/food collection window.)
-**Solution:** Queue
-**Reasoning:**
+**Solution:** Queue<br>
+**Reasoning:**<br>
 
 11. To store the genealogy information of biological species.
-**Solution:** Tree
-**Reasoning:**
+**Solution:** Tree<br>
+**Reasoning:**<br>
 
 12. To store an alphabetized list of names in order to look up quickly.
-**Solution:** 
-**Reasoning:**
+**Solution:**<br>
+**Reasoning:**<br>
 
 
 
