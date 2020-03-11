@@ -1,11 +1,11 @@
 ## Homework - Data Structures and Complexity
 #### Due: 03-13-2020 (Friday @ 3:30 p.m.)
 
-- Given a collection of algorithms that runs on **O(1), O(n log n), O(n), O(n<sup>2</sup>), O(log n), O(n!)**, order the algorithms from fastest to slowest.
+- Given a collection of algorithms that runs on **O(1), O(n log n), O(n), O(n<sup>2</sup>), O(log n), O(n!)**, order the algorithms from fastest to slowest.<br>
 **Solution:**<br>
 **Reasoning:**<br>
 
-- Suppose that the complexity of an algorithm is O(n<sup>2</sup>). Suppose that the program that uses the algorithm run in 10 seconds for a data set of size n. If the data size is doubled, how long will it take (approximately) to run the program?
+- Suppose that the complexity of an algorithm is O(n<sup>2</sup>). Suppose that the program that uses the algorithm run in 10 seconds for a data set of size n. If the data size is doubled, how long will it take (approximately) to run the program?<br>
 **Solution:**<br>
 **Reasoning:**<br>
 
@@ -54,7 +54,7 @@ for (int j = 1 ; j < n ; j *= 2)
 
 
 At most, how many comparisons are required to search a sorted vector of 1023 elements using the binary
-search algorithm?
+search algorithm?<br>
 **Solution:** It would take, at most, 10 comparisons. <br>
 **Reasoning:** Dakota and I wrote a replit and actually tried this with a sorted array of 1023 elements, and the result was 10 comparisons.<br>
 
@@ -62,7 +62,7 @@ In each of the following examples, please choose the best data structure(s).
 - Options are: **Array, Linked Lists, Stack, Queues, Trees, Graphs, Sets, Hash Tables**. 
 - Note that there may not be one clear answer.
 
-1. You have to store social network “feeds”. You do not know the size, and things may need to be dynamically added.
+1. You have to store social network “feeds”. You do not know the size, and things may need to be dynamically added.<br>
 **Solution:** Stack<br>
 **Reasoning:**<br>
 
