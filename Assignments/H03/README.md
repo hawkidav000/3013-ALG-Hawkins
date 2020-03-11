@@ -2,19 +2,23 @@
 #### Due: 03-13-2020 (Friday @ 3:30 p.m.)
 
 - Given a collection of algorithms that runs on **O(1), O(n log n), O(n), O(n<sup>2</sup>), O(log n), O(n!)**, order the algorithms from fastest to slowest.
-**Solution:** 
+**Solution:**
+**Reasoning:** 
 
-- Suppose that the complexity of an algorithm is O(n<sup>2</sup>). Suppose that the program that uses the algorithm run in 10 seconds for a data set of size n. If the data size is doubled, how long will it take (approximately) to run the program? 
+- Suppose that the complexity of an algorithm is O(n<sup>2</sup>). Suppose that the program that uses the algorithm run in 10 seconds for a data set of size n. If the data size is doubled, how long will it take (approximately) to run the program?
+**Solution:**
+**Reasoning:** 
+
 
 
 - Complexities : **O(1), O(n log n), O(n), O(n<sup>2</sup>), O(log n), O(n!) , O(h)**
-1.Finding the max element in an unordered stack would require ______**O(n)**_______ operations?
-2. Finding the min element in an unordered queue would require ______**O(n)**_______ operations?
-3. Finding some element in some Binary Search Tree would require ______**O(h)**_______ operations?
-4. Finding some element in a balanced Binary Search Tree would require _____________ operations?
-5. Finding some element in an ordered linked list would require _____________ operations (worst case)?
-6. Finding some element in an ordered linked list would require _____________ operations (average case)?
-7. Finding some element in an unordered linked list would require _____________ operations (worst case)?
+1.Finding the max element in an unordered stack would require **O(n)** operations?
+2. Finding the min element in an unordered queue would require **O(n)** operations?
+3. Finding some element in some Binary Search Tree would require **O(h)** operations?
+4. Finding some element in a balanced Binary Search Tree would require **O(log n)** operations?
+5. Finding some element in an ordered linked list would require **O(n)** operations (worst case)?
+6. Finding some element in an ordered linked list would require **O(n/2)** operations (average case)?
+7. Finding some element in an unordered linked list would require **O(n)** operations (worst case)?
 
 
 8. For each of the following, count the number of operations where some_statement is executed based on the loops
@@ -25,6 +29,9 @@ for (int I = 0; I < n; I++)
     for (int j = 1; j < n; j++)
         {some_statement;}
 ```
+**Solution:**
+**Reasoning:** 
+
 
 ```cpp
 //B
@@ -32,6 +39,9 @@ for (int I = 0; I < n; I +=2)
     for (int j = 1; j < n; j++)
         {some_statement;}
 ```
+**Solution:**
+**Reasoning:** 
+
 
 ```cpp
 //C
@@ -39,10 +49,14 @@ for (int j = 1 ; j < n ; j *= 2)
     for (int I = 1; i<n; i++)
         {some_statement;} 
 ```
+**Solution:**
+**Reasoning:** 
+
 
 At most, how many comparisons are required to search a sorted vector of 1023 elements using the binary
 search algorithm?
-**Solution:** It would take, at most, 10 comparisons. Dakota and I wrote a replit and actually tried this with a sorted array of 1023 elements, and the result was 10 comparisons.
+**Solution:** It would take, at most, 10 comparisons. 
+**Reasoning:** Dakota and I wrote a replit and actually tried this with a sorted array of 1023 elements, and the result was 10 comparisons.
 
 In each of the following examples, please choose the best data structure(s).
 - Options are: **Array, Linked Lists, Stack, Queues, Trees, Graphs, Sets, Hash Tables**. 
