@@ -1,5 +1,3 @@
-//Was able to get all correct output on uDebug; however, UVa Online Judge is down so I haven't been able to submit an attempt
-
 #include <iostream>
 #include <queue>
 
